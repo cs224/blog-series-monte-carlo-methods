@@ -8,6 +8,7 @@ __pycache__/
 
 # Distribution / packaging
 .Python
+env/
 build/
 develop-eggs/
 dist/
@@ -74,8 +75,21 @@ docs/_build/
 # PyBuilder
 target/
 
-# Jupyter Notebook
+# IDE configs
+.idea/
+
+# Juypter Notebook Checkpoitns
 .ipynb_checkpoints
+
+# shelve
+*.dir
+*.dat
+*.bak
+
+*~
+.local
+/.Rhistory
+
 
 # IPython
 profile_default/
