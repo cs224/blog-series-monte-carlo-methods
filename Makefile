@@ -1,8 +1,9 @@
 
 NOTEBOOKS := $(shell find . -maxdepth 1 -name '*.ipynb' ! -name "0000-*")
 HTML := $(NOTEBOOKS:.ipynb=.html)
+MD := $(NOTEBOOKS:.ipynb=.md)
 
-all: $(HTML)
+all: $(HTML) $(MD)
 
 install_theme:
 	rm -rf $${HOME}/.local/share/jupyter/nbconvert/templates/jptrblogtheme &&	ln -s $(shell readlink -f ./jptrblogtheme) $${HOME}/.local/share/jupyter/nbconvert/templates/jptrblogtheme
