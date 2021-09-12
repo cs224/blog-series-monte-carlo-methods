@@ -141,5 +141,5 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
-*.md
-*.html
+0*.md
+0*.html
