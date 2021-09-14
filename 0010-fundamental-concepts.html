@@ -13998,7 +13998,7 @@ a.anchor-link {
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p>This blog post is part of the <a href="https://weisser-zwerg.dev/posts/series-monte-carlo-methods/">Series: Monte Carlo Methods</a>.</p>
-<p>You can find this blog post on <a href="https://weisser-zwerg.dev/posts/monte-carlo-fundamental-concepts/">weisser-zwerg.dev</a> or on <a href="https://github.com/cs224/blog-series-monte-carlo-methods">github</a> as either <a href="https://rawcdn.githack.com/cs224//blog-series-monte-carlo-methods/blob/main/0010-fundamental-concepts.html">html</a> or via <a href="https://nbviewer.jupyter.org/github/cs224/blog-series-monte-carlo-methods/blob/main/0010-fundamental-concepts.ipynb?flush_cache=true">nbviewer</a>.</p>
+<p>You can find this blog post on <a href="https://weisser-zwerg.dev/posts/monte-carlo-fundamental-concepts/">weisser-zwerg.dev</a> or on <a href="https://github.com/cs224/blog-series-monte-carlo-methods">github</a> as either <a href="https://rawcdn.githack.com/cs224/blog-series-monte-carlo-methods/main/0010-fundamental-concepts.html">html</a> or via <a href="https://nbviewer.jupyter.org/github/cs224/blog-series-monte-carlo-methods/blob/main/0010-fundamental-concepts.ipynb?flush_cache=true">nbviewer</a>.</p>
 
 </div>
 </div>
@@ -14021,8 +14021,8 @@ a.anchor-link {
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p>Only very recently I found the work of 2010 <a href="https://en.wikipedia.org/wiki/Turing_Award">Turing Award</a> winner <a href="https://en.wikipedia.org/wiki/Leslie_Valiant">Leslie Valiant</a>. In his book <a href="https://www.amazon.com/Probably-Approximately-Correct-Algorithms-Prospering/dp/0465060722/">Probably Approximately Correct</a> he defines the two concepts <strong>theoryful</strong> and <strong>theoryless</strong>. This would be the place where I would draw the line between statistics and machine learning.</p>
-<p>Theoryful: a human has to provide a model and there may be some data that helps to tune the model. A good example would be newtonian motion of the planets around the sun where Newton's laws provide the model and the data helps to pinpoint the <a href="https://en.wikipedia.org/wiki/Gravitational_constant">gravitational constant</a>.</p>
-<p>Theoryless: you take a very generic algorithm and a lot of data and the algorithm figures out the rest. A good example would be a <a href="https://en.wikipedia.org/wiki/Multilayer_perceptron">multilayer perceptron</a> and pictures of objects, where the algorithm learns via data to identify the objects. The same multilayer perceptron architecture could be used to pilot a self driving car.</p>
+<p>Theoryful: a human has to provide a model and there may be some data that helps to tune the model. A good example would be Newtonian motion of the planets around the sun where Newton's laws provide the model and the data helps to pinpoint the <a href="https://en.wikipedia.org/wiki/Gravitational_constant">gravitational constant</a>.</p>
+<p>Theoryless: you take a very generic algorithm and a lot of data and the algorithm figures out the rest. A good example would be a <a href="https://en.wikipedia.org/wiki/Multilayer_perceptron">multilayer perceptron</a> and pictures of objects, where the algorithm learns via data to identify the objects. The same multilayer perceptron architecture could be used to pilot a self-driving car.</p>
 
 </div>
 </div>
@@ -14044,7 +14044,7 @@ a.anchor-link {
 </ul>
 <p>The construction of sampling algorithms based on fine-grained composable abstractions
 (<a href="https://web.archive.org/web/20130117175652/http://blog.getprismatic.com/blog/2012/4/5/software-engineering-at-prismatic.html">FCA</a>) will be the main focus of this blog post series.</p>
-<p>In the case of Importance Sampling you could argue that there is not only a single model, but a sequence of related models that form a "bridge" from something simple to the target model of interest. But we will get there in the course of this blog post series.</p>
+<p>In the case of Importance Sampling, you could argue that there is not only a single model, but a sequence of related models that form a "bridge" from something simple to the target model of interest. But we will get there in the course of this blog post series.</p>
 
 </div>
 </div>
@@ -14055,7 +14055,7 @@ a.anchor-link {
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>Initially, when I started to read about the Bayesian method of statistics and its inference methodology I often heard the term <a href="https://statswithr.github.io/book/the-basics-of-bayesian-statistics.html#bayes-updating">Bayes updating</a>. The picture that this terminology evoked in me was that there is a sequential process of taking a prior, a likelihood for a single event and then perform "Bayes updating" to receive the posterior, with that posterior becoming the new prior for the next data-point from where the process continuous until all data-items are consumed.</p>
+<p>Initially, when I started to read about the Bayesian method of statistics and its inference methodology, I often heard the term <a href="https://statswithr.github.io/book/the-basics-of-bayesian-statistics.html#bayes-updating">Bayes updating</a>. The picture that this terminology evoked in me was that there is a sequential process of taking a prior, a likelihood for a single event and then perform "Bayes updating" to receive the posterior, with that posterior becoming the new prior for the next data-point from where the process continuous until all data-items are consumed.</p>
 <p>$
 \displaystyle
 \begin{array}{rcl}
@@ -14068,14 +14068,14 @@ p(\theta\,|\,d_2)&amp;=&amp;\displaystyle \frac{p(d_2,\theta)}{\int p(d_2,\theta
 &amp;=&amp;p_N(\theta)
 \end{array}
 $</p>
-<p>While this picture is of course correct and is what you would do if you calculated the posterior manually via for example using <a href="https://en.wikipedia.org/wiki/Conjugate_prior">conjugate priors</a>, this picture prevented me from understanding of what is going on in especially MCMC methods, but also in SMC methods and I found it much more useful to think of the model as the (immutable &ndash; without updating) total joint probability including all data-points, e.g.:</p>
+<p>While this picture is of course correct and is what you would do if you calculated the posterior manually by using (for example) <a href="https://en.wikipedia.org/wiki/Conjugate_prior">conjugate priors</a>, this picture prevented me from understanding what is going on in especially MCMC methods, but also in SMC methods and I found it much more useful to think of the model as the (immutable &ndash; without updating) total joint probability including all data-points, e.g.:</p>
 <p>$
 \displaystyle
 \begin{array}{rcl}
-p(d_1,d_2,...,d_N,\theta)&amp;=&amp;p_0(\theta)\cdot p(d_1\,|\,\theta)\cdot p(d_2\,|\,\theta)\cdot ... \cdot \cdot p(d_N\,|\,\theta)\\
+p(d_1,d_2,...,d_N,\theta)&amp;=&amp;p_0(\theta)\cdot p(d_1\,|\,\theta)\cdot p(d_2\,|\,\theta)\cdot ... \cdot p(d_N\,|\,\theta)\\
 \end{array}
 $</p>
-<p>That is already all you need for the main Monte Carlo sampling methods, because they only depend on an unnormalized probability density function and if you take $p(d_1=d_1,d_2=d_2,...,d_N=d_N,\theta)$ (you simply take the total joint probability function and <a href="https://en.wikipedia.org/wiki/Currying">partially apply</a> its data arguments so that you receive a function of the set of unknown parameters $\theta$ alone, e.g. $f(\theta)=p(d_1=d_1,d_2=d_2,...,d_N=d_N,\theta)$) then you are ready to go, because $f(\theta)\propto p(\theta\,|\,d_1=d_1,d_2=d_2,...,d_N=d_N)=\frac{f(\theta)}{Z}$ where $Z$ (the so called <a href="https://en.wikipedia.org/wiki/Partition_function_(mathematics">partition function</a>)) is independent from $\theta$ and therefore a constant for the concrete data-set you're looking at.</p>
+<p>That is all you need for the main Monte Carlo sampling methods, because they only depend on an unnormalized probability density function and if you take $p(d_1=d_1,d_2=d_2,...,d_N=d_N,\theta)$ (you simply take the total joint probability function and <a href="https://en.wikipedia.org/wiki/Partial_application">partially apply</a> its data arguments so that you receive a function of the set of unknown parameters $\theta$ alone, e.g. $f(\theta)=p(d_1=d_1,d_2=d_2,...,d_N=d_N,\theta)$) then you are ready to go, because $f(\theta)\propto p(\theta\,|\,d_1=d_1,d_2=d_2,...,d_N=d_N)=\frac{f(\theta)}{Z}$ where $Z$ (the so called <a href="https://en.wikipedia.org/wiki/Partition_function_(mathematics">partition function</a>)) is independent from $\theta$ and therefore a constant for the concrete data-set you're looking at.</p>
 
 </div>
 </div>
@@ -14086,7 +14086,7 @@ $</p>
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>In (bayesian) statistics a model is basically a <strong>total</strong> <a href="https://en.wikipedia.org/wiki/Probability_mass_function">probability mass function</a> (PMF; in the discrete case) or a <a href="https://en.wikipedia.org/wiki/Probability_density_function">probiability density function</a> (PDF; in the continuous case). It comes often in the form of a <a href="https://en.wikipedia.org/wiki/Graphical_model">probabilistic graphical model</a> (PGM; also see <a href="https://en.wikipedia.org/wiki/Bayesian_hierarchical_modeling">Bayesian hierarchical model</a>). As an example you see below the graphical representation of multiple coin tosses using the same coin:</p>
+<p>In (Bayesian) statistics a model is basically a <strong>total</strong> <a href="https://en.wikipedia.org/wiki/Probability_mass_function">probability mass function</a> (PMF; in the discrete case) or a <a href="https://en.wikipedia.org/wiki/Probability_density_function">probability density function</a> (PDF; in the continuous case). It comes often in the form of a <a href="https://en.wikipedia.org/wiki/Graphical_model">probabilistic graphical model</a> (PGM; also see <a href="https://en.wikipedia.org/wiki/Bayesian_hierarchical_modeling">Bayesian hierarchical model</a>). As an example, you see below the graphical representation of multiple coin tosses using the same coin:</p>
 
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell    celltag_hide_input">
@@ -14127,9 +14127,9 @@ p(X_i=d_i\,|\,\theta) &amp;=&amp; \mathrm{Bernoulli}(X_i=d_i;p=\theta) \\
 \displaystyle p(X_1=d_1, X_2 = d_2, ..., X_n = d_n, \theta)&amp;=&amp; \displaystyle p(\theta) \cdot\prod_{i=1}^N p(X_i=d_i\,|\,\theta)
 \end{array}
 $</p>
-<p>Where on the left hand side you have the total probability and on the right hand side you have the prior probability $p(\theta)$ (here given as a <a href="https://en.wikipedia.org/wiki/Beta_distribution">Beta distribution</a>) multiplied by the <a href="https://en.wikipedia.org/wiki/Conditional_probability">conditional probabilities</a> $p(X_i=d_i\,|\,\theta)$ (here given as a <a href="https://en.wikipedia.org/wiki/Bernoulli_distribution">Bernoulli distribution</a>). The important point to remember is <strong>YOU NEED THE TOTAL PROBABILITY FUNCTION</strong>. How you get it does not matter. The tutal probability function is a scalar function, e.g. once you provide all arguments you get a scalar.</p>
-<p>For pure continuous probability density functions and pure discrete probability mass functions this is straight forward. In the pure continuous case you in general have a function like a product of Gauss/Normal:
-$f(x_1,x_2;\mu,\sigma)=\frac{1}{\sqrt{2\pi}\sigma}e^{-\frac{1}{2}\frac{(x_1-\mu)^2}{\sigma^2} }\frac{1}{\sqrt{2\pi}\sigma}e^{-\frac{1}{2}\frac{(x_2-\mu)^2}{\sigma^2} }$. In the pure discrete case you get a multi dimensional array like for two dice throws</p>
+<p>Where on the left hand side you have the total probability and on the right hand side you have the prior probability $p(\theta)$ (here given as a <a href="https://en.wikipedia.org/wiki/Beta_distribution">Beta distribution</a>) multiplied by the <a href="https://en.wikipedia.org/wiki/Conditional_probability">conditional probabilities</a> $p(X_i=d_i\,|\,\theta)$ (here given as a <a href="https://en.wikipedia.org/wiki/Bernoulli_distribution">Bernoulli distribution</a>). The important point to remember is <strong>YOU NEED THE TOTAL PROBABILITY FUNCTION</strong>. How you get it does not matter. The total probability function is a <strong>scalar function</strong>, e.g. once you provide all arguments you get a scalar.</p>
+<p>For pure continuous probability density functions and pure discrete probability mass functions this is straight forward. In the pure continuous case you typically have a function like a product of Gauss/Normal:
+$f(x_1,x_2;\mu,\sigma)=\frac{1}{\sqrt{2\pi}\sigma}e^{-\frac{1}{2}\frac{(x_1-\mu)^2}{\sigma^2} }\frac{1}{\sqrt{2\pi}\sigma}e^{-\frac{1}{2}\frac{(x_2-\mu)^2}{\sigma^2} }$. In the pure discrete case, you get a multi-dimensional array like for two dice throws</p>
 
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell    celltag_hide_input">
@@ -14160,7 +14160,11 @@ $\displaystyle \left[\begin{matrix}\frac{1}{36} &amp; \frac{1}{36} &amp; \frac{1
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>For mixed cases I often got confused and therefore I elaborated on two examples in painstaking detail in the appendix, on two independent dice rolls and a two component mixture model with two observations.</p>
+<p>For mixed cases I often got confused and therefore I elaborated two examples in painstaking detail in the appendix:</p>
+<ul>
+<li>a model for <a href="#Two-independent-dice-rolls">two independent dice rolls</a> and </li>
+<li>a <a href="#Two-component-mixture-model">two-component mixture model</a> with two observations.</li>
+</ul>
 
 </div>
 </div>
@@ -14171,9 +14175,9 @@ $\displaystyle \left[\begin{matrix}\frac{1}{36} &amp; \frac{1}{36} &amp; \frac{1
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>While this topic is beyond the scope of this blog post series I nevertheless wanted to mention it. Once you have several models that are supposed to describe the same observations how do you then decide which model is actually the "best" model?</p>
-<p>The landmark rule is that a model is only as good as it is able to describe/predict future/unseen data-points. An approximation of that characteristic can be obtained via <a href="https://en.wikipedia.org/wiki/Cross-validation_(statistics">cross-validation</a>), where one variant is <a href="https://en.wikipedia.org/wiki/Cross-validation_(statistics">leave-one-out cross-validation</a>#Leave-one-out_cross-validation) (LOOCV). You can either apply this directly or use some approximation to it like an <a href="https://docs.displayr.com/wiki/Information_Criteria">information criterion</a>. In "<a href="https://www.amazon.com/-/de/dp/036713991X">Statistical Rethinking</a>: A Bayesian Course with Examples in R and STAN" in chapter 7. "Ulysses' Compass" Richard McElreath proposes to use <a href="https://arxiv.org/abs/1507.02646">Pareto-Smoothed Importance Sampling Cross-Validation</a> (PSIS) or the <a href="https://en.wikipedia.org/wiki/Watanabe%E2%80%93Akaike_information_criterion">Widely Applicable Information Criterion</a> (WAIC). He adds a word of caution, though: Deviance is an assessment of predictive accuracy, not of truth!</p>
-<p>John Kruschke proposes in "<a href="https://www.amazon.com/-/de/dp/0124058884/">Doing Bayesian Data Analysis</a>: A Tutorial with R, JAGS, and Stan" to use the <a href="https://en.wikipedia.org/wiki/Bayes_factor">Bayes factor</a> about which I wrote an earlier blog post: <a href="https://weisser-zwerg.dev/posts/model-comparison-via-bayes-factor/">Model Comparison via Bayes Factor</a> or to create a mixture model out of the different competing (sub-)models and then simply apply the machinery of the Monte Carlo sampling methodology to get probabilities for each sub-model as $p_1, p_2, ..., p_M$. The idea then is to say that the model with the highest probability describes the data best. This approach is also the basis of <a href="https://en.wikipedia.org/wiki/Ensemble_learning#Bayesian_model_averaging">model averaging</a> to create a new and better model by simply using this mixture model for your predictions.</p>
+<p>While this topic is beyond the scope of this blog post series, I nevertheless wanted to mention it. Once you have several models that are supposed to describe the same observations how do you then decide which model is actually the "best" model?</p>
+<p>The landmark rule is that a model is only as good as it is able to describe/predict future/unseen data-points. An approximation of that characteristic can be obtained via <a href="https://en.wikipedia.org/wiki/Cross-validation_(statistics%29">cross-validation</a>, where one variant is <a href="https://en.wikipedia.org/wiki/Cross-validation_(statistics%29#Leave-one-out_cross-validation">leave-one-out cross-validation</a> (LOOCV). You can either apply this directly or use some approximation like an <a href="https://docs.displayr.com/wiki/Information_Criteria">information criterion</a>. In "<a href="https://www.amazon.com/-/de/dp/036713991X">Statistical Rethinking</a>: A Bayesian Course with Examples in R and STAN" in chapter 7. "Ulysses' Compass" Richard McElreath proposes to use <a href="https://arxiv.org/abs/1507.02646">Pareto-Smoothed Importance Sampling Cross-Validation</a> (PSIS) or the <a href="https://en.wikipedia.org/wiki/Watanabe%E2%80%93Akaike_information_criterion">Widely Applicable Information Criterion</a> (WAIC). He adds a word of caution, though: <a href="https://en.wikipedia.org/wiki/Deviance_(statistics%29">Deviance</a> is an assessment of predictive accuracy, not of truth!</p>
+<p>John Kruschke proposes in "<a href="https://www.amazon.com/-/de/dp/0124058884/">Doing Bayesian Data Analysis</a>: A Tutorial with R, JAGS, and Stan" to use the <a href="https://en.wikipedia.org/wiki/Bayes_factor">Bayes factor</a> (see for example my earlier blog post: <a href="https://weisser-zwerg.dev/posts/model-comparison-via-bayes-factor/">Model Comparison via Bayes Factor</a>) or to create a mixture model out of the different competing (sub-)models and then simply apply the machinery of the Monte Carlo sampling methodology to get probabilities for each sub-model as $p_1, p_2, ..., p_M$. The idea then is to say that the model with the highest probability describes the data best. This approach is also the basis for <a href="https://en.wikipedia.org/wiki/Ensemble_learning#Bayesian_model_averaging">model averaging</a> to create a new and better model by simply using this mixture model for your predictions.</p>
 
 </div>
 </div>
@@ -14198,7 +14202,7 @@ $</p>
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>This is how you typically construct (<a href="https://en.wikipedia.org/wiki/Generative_model">generative</a>) models. You basically say, if I knew $x$ then knowing $y$ would be simple. Let's take a physical example like throwing a ball. In a vaccum the trajectory of the ball would be a parabola. Under realistic conditions you have wind and other disturbances. But if you say, if I know where the ball measured by location $x$ (a 3 dimensional vector) was at $t=t_0$ then I could tell where the ball would be at $t=t_1$:</p>
+<p>This is how you typically construct (<a href="https://en.wikipedia.org/wiki/Generative_model">generative</a>) models. You basically say: if I knew $x$ then knowing $y$ would be simple. Let's take a physical example like throwing a ball. In a vacuum the trajectory of the ball would be a parabola. Under realistic conditions you have wind and other disturbances. But if you say, if I know where the ball measured by location $x$ (a 3 dimensional vector) was at $t=t_0$ then I could tell where the ball would be at $t=t_1$:</p>
 <p>$
 \displaystyle
 \begin{array}{rcl}
@@ -14233,9 +14237,9 @@ $</p>
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>I only learned to appreciate this law really when reading chapter 1.3.6 "The Law of Total Probability" in <a href="https://www.amazon.com/Causal-Inference-Statistics-Judea-Pearl/dp/1119186846">Causal Inference in Statistics - A Primer</a> by Judea Pearl (<a href="https://en.wikipedia.org/wiki/Turing_Award">Turing Award</a> winner 2011), Madelyn Glymour and Nicholas P. Jewell. There they also presented it under different synonymous names like "the law of alternatives" or "extending the conversation". In the book they call it "conditionalizing on y", but the term "extending the conversation" was what <em>triggered</em> and understanding with me.</p>
-<p>Sometimes you just don't know how to get to $p(x)$, but if you knew $y$ you also would know how to get to $x$, e.g. you know $p(x\,|\,y)$. And often getting to a $p(y)$ is also possible.</p>
-<p>It is basically the reverse idea from above in the example with the motion of the ball. If you just said I want to know $p(x_1)$ I would not know how to get there, but if you introduce $p(x_1\,|\,x_0)$ this opens up the path for a recursive calculation to the point where the ball was thrown and at that point you either know the position exactly, e.g. $p(x)=\delta(x = x_\text{start})$ (where the $\delta$ is the <a href="https://en.wikipedia.org/wiki/Dirac_delta_function">Dirac delta</a>) or you give it some uncertainty, e.g. $p(x)=\mathcal{N}(x_\text{start},\sigma_l)$. Etherway, you can construct a generative models.</p>
+<p>I only learned to appreciate this law really when reading chapter 1.3.6 "The Law of Total Probability" in <a href="https://www.amazon.com/Causal-Inference-Statistics-Judea-Pearl/dp/1119186846">Causal Inference in Statistics - A Primer</a> by Judea Pearl (<a href="https://en.wikipedia.org/wiki/Turing_Award">Turing Award</a> winner 2011), Madelyn Glymour and Nicholas P. Jewell. There they also presented it under different synonymous names like "the law of alternatives" or "extending the conversation". In the book they call it "conditionalizing on y", but the term "extending the conversation" was what stuck with me.</p>
+<p>Sometimes you just don't know how to get to $p(x)$, but if you knew $y$ you also would know how to get to $x$, e.g. you know $p(x\,|\,y)$. You're "extending the conversation" to include $y$ in addition to $x$. And often getting to a $p(y)$ is also possible.</p>
+<p>It is basically the reverse idea from above in the example with the motion of the ball. If you just said I want to know $p(x_1)$ I would not know how to get there, but if you introduce $p(x_1\,|\,x_0)$ this opens up the path for a recursive calculation to the point where the ball was thrown and at that point you either know the position exactly, e.g. $p(x)=\delta(x = x_\text{start})$ (where the $\delta$ is the <a href="https://en.wikipedia.org/wiki/Dirac_delta_function">Dirac delta</a>) or you give it some uncertainty, e.g. $p(x)=\mathcal{N}(x_\text{start},\sigma_l)$. Eitherway, you can construct a generative model.</p>
 
 </div>
 </div>
@@ -14246,26 +14250,10 @@ $</p>
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>That is another point that took me some time to digest. The names like probability-density-function (PDF) or probability-mass-function (PMF) suggest a mathematical form like a function. The typical example is the gauss bell shape:</p>
+<p>That is another point that took me some time to digest. The names like probability-density-function (PDF) or probability-mass-function (PMF) suggest a mathematical form like a function. The typical example is the Gauss bell shape:</p>
 
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[5]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span> <span class="n">dpi</span><span class="o">=</span><span class="mi">80</span><span class="p">,</span> <span class="n">facecolor</span><span class="o">=</span><span class="s1">&#39;w&#39;</span><span class="p">,</span> <span class="n">edgecolor</span><span class="o">=</span><span class="s1">&#39;k&#39;</span><span class="p">)</span>
-<span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
-<span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mf">3.0</span><span class="p">,</span><span class="mf">3.0</span><span class="p">,</span><span class="mi">100</span><span class="p">)</span>
-<span class="n">y</span> <span class="o">=</span> <span class="n">stats</span><span class="o">.</span><span class="n">norm</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">pdf</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">);</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell    celltag_hide_input">
 
 <div class="jp-Cell-outputWrapper">
 
@@ -14295,13 +14283,13 @@ $</p>
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>In this case the probability distribution function can actually be given as a mathematical function:</p>
+<p>In this case the probability density function can be given as a mathematical function:</p>
 <p>$\displaystyle
 \frac{1}{\sqrt{2\pi}\sigma}e^{- \frac{\left(x - \mu\right)^{2}}{2 \sigma^{2}}}
 $</p>
-<p>But in most cases that is not the case. So what should you do then?</p>
+<p>But in most cases that is not possible. So what should you do then?</p>
 <p>I cannot remember anymore in which source I've read it, but the author said that for probability distributions the "right" representation might actually be collections of samples.</p>
-<p>Let's look at a toy example. We sample 1000 values from a normal distribution with mean 0 and standard deviation 1. Then we act as if we would only know that the samples are from a normal distribution, but mu and sigma would be unknown. In PyMC3 this example looks like that:</p>
+<p>Let's look at a toy example. We sample 1000 values from a normal distribution with mean 0 and standard deviation 1. Then we act as if we would only know that the samples are drawn from a normal distribution, but with unknown $\mu$ and $\sigma$. In PyMC3 this example looks like this:</p>
 
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
@@ -14382,8 +14370,6 @@ NUTS: [sigma, mu]
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
 <pre>Sampling 4 chains for 1_000 tune and 1_000 draw iterations (4_000 + 4_000 draws total) took 2 seconds.
-/home/local/cs/local/install/anaconda3-2021.05-Linux-x86_64/envs/py38ds/lib/python3.8/site-packages/numba/core/dispatcher.py:241: UserWarning: Numba extension module &#39;numba_scipy&#39; failed to load due to &#39;ValueError(No function &#39;__pyx_fuse_0pdtr&#39; found in __pyx_capi__ of &#39;scipy.special.cython_special&#39;)&#39;.
-  entrypoints.init_all()
 </pre>
 </div>
 </div>
@@ -14395,7 +14381,7 @@ NUTS: [sigma, mu]
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>Just as a reminder and to make the link to what we said above about the model let's be explicit and give the probability distribution function in sympy for two data-points instead of the 1000 from above. All that PyMC3 does is to construct such a total probability distribution function and evaluate it at the given data-points. So in our example $x_1$ and $x_2$ are given and $\mu$ and $\sigma$ are "free" variables.</p>
+<p>Just as a reminder and to make the link to what we said above (about the model) more clear, let's be explicit and give the probability density function in sympy for two data-points instead of the 1000. All that PyMC3 does is to construct such a total joint probability density function and evaluate it at the given data-points. So in our example $x_1$ and $x_2$ are given and $\mu$ and $\sigma$ are "free" variables.</p>
 <p>As another remark: the <a href="https://en.wikipedia.org/wiki/Gamma_distribution">Gamma distribution</a> is sometimes parametrized via $\alpha, \beta$ and sometimes via $k, \theta$: $\alpha = k; \beta=1/\theta$</p>
 
 </div>
@@ -14413,7 +14399,7 @@ NUTS: [sigma, mu]
 <span class="n">prior_sigma</span> <span class="o">=</span> <span class="n">sympy</span><span class="o">.</span><span class="n">stats</span><span class="o">.</span><span class="n">crv_types</span><span class="o">.</span><span class="n">GammaDistribution</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">pdf</span><span class="p">(</span><span class="n">ssigma</span><span class="p">)</span>
 <span class="n">likelihood</span> <span class="o">=</span> <span class="n">sympy</span><span class="o">.</span><span class="n">stats</span><span class="o">.</span><span class="n">crv_types</span><span class="o">.</span><span class="n">NormalDistribution</span><span class="p">(</span><span class="n">smu</span><span class="p">,</span> <span class="n">ssigma</span><span class="p">)</span><span class="o">.</span><span class="n">pdf</span><span class="p">(</span><span class="n">sx1</span><span class="p">)</span><span class="o">*</span><span class="n">sympy</span><span class="o">.</span><span class="n">stats</span><span class="o">.</span><span class="n">crv_types</span><span class="o">.</span><span class="n">NormalDistribution</span><span class="p">(</span><span class="n">smu</span><span class="p">,</span> <span class="n">ssigma</span><span class="p">)</span><span class="o">.</span><span class="n">pdf</span><span class="p">(</span><span class="n">sx2</span><span class="p">)</span>
 <span class="n">total</span> <span class="o">=</span> <span class="n">sympy</span><span class="o">.</span><span class="n">UnevaluatedExpr</span><span class="p">(</span><span class="n">prior_mu</span><span class="p">)</span><span class="o">*</span><span class="n">sympy</span><span class="o">.</span><span class="n">UnevaluatedExpr</span><span class="p">(</span><span class="n">prior_sigma</span><span class="p">)</span><span class="o">*</span><span class="n">sympy</span><span class="o">.</span><span class="n">UnevaluatedExpr</span><span class="p">(</span><span class="n">likelihood</span><span class="p">)</span>
-<span class="n">total</span>
+<span class="n">sympy</span><span class="o">.</span><span class="n">Matrix</span><span class="p">([</span><span class="n">prior_mu</span><span class="p">,</span> <span class="n">prior_sigma</span><span class="p">,</span> <span class="n">likelihood</span><span class="p">])</span>
 </pre></div>
 
      </div>
@@ -14430,6 +14416,43 @@ NUTS: [sigma, mu]
 
     
     <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[7]:</div>
+
+
+
+
+<div class="jp-RenderedLatex jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/latex">
+$\displaystyle \left[\begin{matrix}\frac{\sqrt{2} e^{- \frac{\mu^{2}}{200}}}{20 \sqrt{\pi}}\\\frac{\sigma^{2} e^{- \sigma}}{2}\\\frac{e^{- \frac{\left(- \mu + x_{1}\right)^{2}}{2 \sigma^{2}}} e^{- \frac{\left(- \mu + x_{2}\right)^{2}}{2 \sigma^{2}}}}{2 \pi \sigma^{2}}\end{matrix}\right]$
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[8]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">total</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[8]:</div>
 
 
 
@@ -14453,7 +14476,7 @@ $\displaystyle \frac{\sqrt{2} e^{- \frac{\mu^{2}}{200}}}{20 \sqrt{\pi}} \frac{\s
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[8]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[9]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">trace_df</span> <span class="o">=</span> <span class="n">trace</span><span class="p">[</span><span class="s1">&#39;posterior&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">to_dataframe</span><span class="p">()</span>
@@ -14473,7 +14496,7 @@ $\displaystyle \frac{\sqrt{2} e^{- \frac{\mu^{2}}{200}}}{20 \sqrt{\pi}} \frac{\s
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[8]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[9]:</div>
 
 
 
@@ -14587,7 +14610,7 @@ $\displaystyle \frac{\sqrt{2} e^{- \frac{\mu^{2}}{200}}}{20 \sqrt{\pi}} \frac{\s
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[9]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[10]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">trace_df</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span><span class="o">.</span><span class="n">to_frame</span><span class="p">()</span>
@@ -14606,7 +14629,7 @@ $\displaystyle \frac{\sqrt{2} e^{- \frac{\mu^{2}}{200}}}{20 \sqrt{\pi}} \frac{\s
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[9]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[10]:</div>
 
 
 
@@ -14661,7 +14684,7 @@ $\displaystyle \frac{\sqrt{2} e^{- \frac{\mu^{2}}{200}}}{20 \sqrt{\pi}} \frac{\s
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[10]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[11]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">pm</span><span class="o">.</span><span class="n">summary</span><span class="p">(</span><span class="n">trace</span><span class="p">)</span>
@@ -14680,7 +14703,7 @@ $\displaystyle \frac{\sqrt{2} e^{- \frac{\mu^{2}}{200}}}{20 \sqrt{\pi}} \frac{\s
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[10]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[11]:</div>
 
 
 
@@ -14753,14 +14776,14 @@ $\displaystyle \frac{\sqrt{2} e^{- \frac{\mu^{2}}{200}}}{20 \sqrt{\pi}} \frac{\s
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>The <em>hdi</em> stands for <a href="https://en.wikipedia.org/wiki/Credible_interval">Highest (Posterior) Density Interval</a> and gives you the range in which credible values are located. As you can see our real values 0.0 for $\mu$ and 1.0 for $\sigma$ are within those hdi invervals.</p>
+<p>The <em>hdi</em> stands for <a href="https://en.wikipedia.org/wiki/Credible_interval">Highest (Posterior) Density Interval</a> and gives the range in which credible values are located. As you can see, our real values 0.0 for $\mu$ and 1.0 for $\sigma$ are within those hdi invervals.</p>
 <p>To get a better idea of the plausible parameter values we'll have a look at a <a href="https://www.statsmodels.org/stable/examples/notebooks/generated/kernel_density.html">density plot</a>.</p>
 
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[11]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[12]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># list(statsmodels.nonparametric.kde.kernel_switch.keys())</span>
@@ -14771,35 +14794,15 @@ $\displaystyle \frac{\sqrt{2} e^{- \frac{\mu^{2}}{200}}}{20 \sqrt{\pi}} \frac{\s
 </div>
 </div>
 
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs   celltag_hide_input">
+
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[12]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[14]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">kdeplot</span><span class="p">(</span><span class="n">lds</span><span class="p">,</span> <span class="n">parameter_name</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">x_min</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">x_max</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">kernel</span><span class="o">=</span><span class="s1">&#39;gau&#39;</span><span class="p">):</span>
-    <span class="k">if</span> <span class="n">parameter_name</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">and</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">lds</span><span class="p">,</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">):</span>
-        <span class="n">parameter_name</span> <span class="o">=</span> <span class="n">lds</span><span class="o">.</span><span class="n">name</span>
-    <span class="n">kde</span> <span class="o">=</span> <span class="n">sm</span><span class="o">.</span><span class="n">nonparametric</span><span class="o">.</span><span class="n">KDEUnivariate</span><span class="p">(</span><span class="n">lds</span><span class="p">)</span>
-    <span class="n">kde</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">kernel</span><span class="o">=</span><span class="n">kernel</span><span class="p">,</span> <span class="n">fft</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">gridsize</span><span class="o">=</span><span class="mi">2</span><span class="o">**</span><span class="mi">10</span><span class="p">)</span>
-    <span class="k">if</span> <span class="n">x_min</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
-        <span class="n">x_min</span> <span class="o">=</span> <span class="n">kde</span><span class="o">.</span><span class="n">support</span><span class="o">.</span><span class="n">min</span><span class="p">()</span>
-    <span class="k">else</span><span class="p">:</span>
-        <span class="n">x_min</span> <span class="o">=</span> <span class="nb">min</span><span class="p">(</span><span class="n">kde</span><span class="o">.</span><span class="n">support</span><span class="o">.</span><span class="n">min</span><span class="p">(),</span> <span class="n">x_min</span><span class="p">)</span>
-    <span class="k">if</span> <span class="n">x_max</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
-        <span class="n">x_max</span> <span class="o">=</span> <span class="n">kde</span><span class="o">.</span><span class="n">support</span><span class="o">.</span><span class="n">max</span><span class="p">()</span>
-    <span class="k">else</span><span class="p">:</span>
-        <span class="n">x_max</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">kde</span><span class="o">.</span><span class="n">support</span><span class="o">.</span><span class="n">max</span><span class="p">(),</span>  <span class="n">x_max</span><span class="p">)</span>
-    <span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="n">x_min</span><span class="p">,</span> <span class="n">x_max</span><span class="p">,</span><span class="mi">100</span><span class="p">)</span>
-    <span class="n">y</span> <span class="o">=</span> <span class="n">kde</span><span class="o">.</span><span class="n">evaluate</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
-    <span class="k">if</span> <span class="n">ax</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
-        <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span> <span class="n">dpi</span><span class="o">=</span><span class="mi">80</span><span class="p">,</span> <span class="n">facecolor</span><span class="o">=</span><span class="s1">&#39;w&#39;</span><span class="p">,</span> <span class="n">edgecolor</span><span class="o">=</span><span class="s1">&#39;k&#39;</span><span class="p">)</span>
-        <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
-    <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">lw</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
-    <span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="n">parameter_name</span><span class="p">)</span>
-    <span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;Density&#39;</span><span class="p">)</span>
-    
-<span class="n">kdeplot</span><span class="p">(</span><span class="n">trace_df</span><span class="p">[</span><span class="s1">&#39;mu&#39;</span><span class="p">],</span> <span class="n">x_min</span><span class="o">=-</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">x_max</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">kdeplot</span><span class="p">(</span><span class="n">trace_df</span><span class="p">[</span><span class="s1">&#39;mu&#39;</span><span class="p">],</span> <span class="n">x_min</span><span class="o">=-</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">x_max</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span>
 </pre></div>
 
      </div>
@@ -14835,7 +14838,7 @@ $\displaystyle \frac{\sqrt{2} e^{- \frac{\mu^{2}}{200}}}{20 \sqrt{\pi}} \frac{\s
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[13]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[15]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">kdeplot</span><span class="p">(</span><span class="n">trace_df</span><span class="p">[</span><span class="s1">&#39;sigma&#39;</span><span class="p">],</span> <span class="n">x_min</span><span class="o">=</span><span class="mf">0.75</span><span class="p">,</span> <span class="n">x_max</span><span class="o">=</span><span class="mf">1.2</span><span class="p">)</span>
@@ -14874,14 +14877,14 @@ $\displaystyle \frac{\sqrt{2} e^{- \frac{\mu^{2}}{200}}}{20 \sqrt{\pi}} \frac{\s
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>We will talk about it in more detail below, but what we did above is that we looked at the marginal likelihood of only $\mu$ or only $\sigma$. If your probability density function is given as samples then marginalzing out other parameters is trivial. You only take the parameter(s) (the columns in the sample dataframe) you're interested in.</p>
+<p>We will talk about it in more detail below, but what we did above is that we looked at the marginal likelihood of only $\mu$ or only $\sigma$. If your probability density function is given as samples then marginalizing out other parameters is trivial. You only take the parameter(s) (the columns in the sample dataframe) you're interested in.</p>
 <p>It is important to understand that the samples, e.g. each row in the sample dataframe, are <strong>jointly plausible</strong>, e.g. they represent the joint probability distribution. If two parameters would be correlated you would see that in the pairsplot like below. In our example the two parameters are obviously uncorrelated.</p>
 
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[14]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[16]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">sns</span><span class="o">.</span><span class="n">pairplot</span><span class="p">(</span><span class="n">trace_df</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="mi">3</span><span class="p">);</span>
@@ -14925,8 +14928,8 @@ $\displaystyle \frac{\sqrt{2} e^{- \frac{\mu^{2}}{200}}}{20 \sqrt{\pi}} \frac{\s
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>While the marginalization and conditional probability operations are quite involved when you deal with probability distributions in the form of mathematical functions these operations are trivial! if you have samples representing the probability distributions.</p>
-<p>Let's start with marginalization. Let's assume you have a joint probability distribution function $p(x,y)$ for two random variables $X$ and $Y$. Then you marginalize out $y$ be integrating over all values of $y$:</p>
+<p>While the marginalization and conditional probability operations are quite involved when you have to deal with probability distributions in their mathematical functions form these operations are <em>trivial</em> if you have samples representing the probability distributions.</p>
+<p>Let's start with marginalization. Let's assume you have a joint probability density function $p(x,y)$ for two random variables $X$ and $Y$. Then you marginalize out $y$ by integrating over all values of $y$:</p>
 <p>$
 \displaystyle
 \begin{array}{rcl}
@@ -14939,23 +14942,23 @@ $</p>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p>This integration may be quite involved even in simple cases like a <a href="https://en.wikipedia.org/wiki/Multivariate_normal_distribution">multi-variate normal distribution</a>. Have a look at <a href="http://web4.cs.ucl.ac.uk/staff/C.Bracegirdle/bayesTheoremForGaussians.pdf">Bayes’ Theorem for Gaussians</a> by Chris Bracegirdle for details.</p>
-<p>In the case of samples marginalization is <em>trivial</em>! You simply sub-select the column(s) you're interested in and you get the marginal distribution for that parameter set.</p>
+<p>In the case of samples, on the other hand, marginalization is <em>trivial</em>! You simply project (in the sense of an <a href="https://en.wikipedia.org/wiki/Projection_%28relational_algebra%29">SQL projection</a>) on the column(s) you're interested in and you get the marginal distribution for that parameter set.</p>
 <p>The conditional probability is defined as:</p>
 <p>$
 \displaystyle
 \begin{array}{rcl}
 p(x,y)&amp;=&amp;\displaystyle p(y\,|\, x)p(x) \\
 \Rightarrow p(y\,|\, x=x_0)&amp;=&amp;\displaystyle \frac{p(x_0,y)}{p(x_0)}\\
-&amp;=&amp;\displaystyle \frac{p(x=x_0,y)}{\int p(x=x_0,y)\mathrm{d}y} \text{ you simply normalize the function } p(x=x_0,y)
+&amp;=&amp;\displaystyle \frac{p(x=x_0,y)}{\int p(x=x_0,y)\mathrm{d}y} \text{ you simply normalize the function} f(y)=p(x=x_0,y)
 \end{array}
 $</p>
-<p>You have to divide two distributions. I also show the variation where you use the marginalization $\int p(x=x_0,y)\mathrm{d}y$, because sometimes that's useful to remember. $p(x=x_0,y)$ is no probability distribution in $y$ any longer, because $\int p(x=x_0,y)\mathrm{d}y &lt; 1$.</p>
+<p>You have to divide two distributions and often have to calculate integrals. I also show the variation where you use the marginalization $\int p(x=x_0,y)\mathrm{d}y$, because sometimes that's useful to remember. $p(x=x_0,y)$ is no probability distribution in $y$ any longer, because $\int p(x=x_0,y)\mathrm{d}y &lt; 1$.</p>
 
 </div>
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>If you deal with samples then the conditional probability is calculated like an SQL <em>where</em> clause, e.g. you sub-select the dataframe for values where $x=x_0$. For continuous variables this condition is nearly never true. Therefore you have to sub-select with a <em>where</em> condition like $x_0-\delta&lt;x&lt;x_0+\delta$. Finally you only keep the columns (SQL projection) of the variables that are on the left hand side of the conditional probability bar ($(\cdot\,|\,\cdot)$), e.g. $y$ in our example.</p>
+<p>If you are in the world of samples then the conditional probability is calculated like an <a href="https://en.wikipedia.org/wiki/Relational_algebra#Selection_%28%CF%83%29">SQL <em>where</em> clause</a>, e.g. you sub-select the dataframe for values where $x=x_0$. For continuous variables this condition is nearly never true. Therefore you have to sub-select with a <em>where</em> condition like $x_0-\delta&lt;x&lt;x_0+\delta$. Finally you only keep the columns (SQL projection) of the variables that are on the left hand side of the conditional probability bar ($(\cdot\,|\,\cdot)$), e.g. $y$ in our example.</p>
 
 </div>
 </div>
@@ -14972,13 +14975,13 @@ $</p>
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>Luckily, in the world of samples, all of that is simple again! Imagine you have a distribution given as samples from $x_1$ and $x_2$. You then construct samples of $x_1+x_2$ by simply adding them up for every row in your samples dataframe, e.g. $x = x_1 + x_2$. And there you are, you have samples of the random variable $X$!</p>
+<p>Luckily, in the world of samples, all of that is simple again! Imagine you have a distribution given as samples from $x_1$ and $x_2$. You then construct samples of $x_1+x_2$ by simply adding them up for every row in your samples dataframe, e.g. you create a new column $x$ by row-wise calculating $x = x_1 + x_2$. And there you are, you have samples of the random variable $X$!</p>
 
 </div>
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>Another example might be like above, like when we calculated the trajectory of the ball. You could also see that example as $X_1 = X_0 + \Delta X$, where $\Delta X$ would be a distribution depending on the time delta $t_1-t_2$, the velocity $v$ and the acceleration $g$. In such cases it is typically easiest to see one of the variables as the starting point, e.g. $X_0$ and then use the law of total probability to construct $p(x_0, x_1)=p(x_0)p(x_1\,|\,x_0)$ and then calculate on the "conditional" side of $p(x_1\,|\,x_0)$, e.g.</p>
+<p>Another example might be like above, like <a href="#Bayes&#39;-theorem">when we calculated the trajectory of the ball</a>. You could also see that example as $X_1 = X_0 + \Delta X$, where $\Delta X$ would be a distribution depending on the time delta $t_2-t_1$, the velocity $v$ and the acceleration $g$. In such cases it is typically easiest to see one of the variables as the starting point, e.g. $X_0$ and then use the law of total probability to construct $p(x_0, x_1)=p(x_0)p(x_1\,|\,x_0)$ and then calculate on the "conditional" side of $p(x_1\,|\,x_0)$, e.g.</p>
 <p>$
 \displaystyle
 p(x_1\,|\,x_0) = \mathcal{N}(x_0+v(t_1-t_0)+(g/2)(t_1-t_0)^2,\sigma_m)
@@ -14994,9 +14997,9 @@ $</p>
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>In the past, whenever I was dealing with machine learning methods, I always felt disappointed, disappointed about the lack of "insight" and "understanding" and that machine learning methods only give me a uni-directional way of reasoning.</p>
-<p>Let's take regression or classification for example. Even the recent really impressive success stories like <a href="https://en.wikipedia.org/wiki/Object_detection">object detection</a> and <a href="https://en.wikipedia.org/wiki/Image_segmentation">image segmentation</a> give you a way from an input to an output. If you wanted to know the most distinguishing features of a dog vs. a cat you're immediately out of luck.</p>
-<p>In my first encounter with <a href="https://en.wikipedia.org/wiki/Bayesian_network">Bayesian networks</a> I was so impressed with the fact that you can not only reason forward from disease to symptoms, but also backward like given the symptoms of a patient, what are the most likely root causes, e.g. which disease might be the root cause and which actions/medicaments might be the best way forward.</p>
+<p>In the past, whenever I was dealing with machine learning methods, I always felt disappointed; disappointed about the lack of "insight" and "understanding" and that machine learning methods only give me a uni-directional way of reasoning.</p>
+<p>Let's take regression or classification for example. Even the recent really impressive success stories like <a href="https://en.wikipedia.org/wiki/Object_detection">object detection</a> and <a href="https://en.wikipedia.org/wiki/Image_segmentation">image segmentation</a> only give you a way from an input to an output. If you wanted to know the most distinguishing features of a dog vs. a cat you're out of luck (there may be ways, but no straight-forward ones).</p>
+<p>In my first encounter with <a href="https://en.wikipedia.org/wiki/Bayesian_network">Bayesian networks</a> I was so impressed with the fact that you can not only reason forward from disease to symptoms, but also backward like given the symptoms of a patient, what are the most likely root causes, e.g. which disease might be the root cause and which actions/drugs might be the best way forward.</p>
 <p>It took me quite some time to understand "what I really wanted". I wanted "all the answers", not only partial answers. And again some more time went by until I found the "term" that refers to what I want: <a href="https://en.wikipedia.org/wiki/Density_estimation">density estimation</a>. This term is often accompanied by other terms like <a href="https://en.wikipedia.org/wiki/Unsupervised_learning">unsupervised learning</a> and recent advances in machine learning are also targeting density estimation directly via <a href="https://en.wikipedia.org/wiki/Generative_model#Deep_generative_models">deep generative models</a>. In the end it all boils down to "discovering" the <a href="https://en.wikipedia.org/wiki/Causal_model">causal network</a> of the world, so that in the end you can answer any question you'd come up with, not only the ones the designer of the "system" wanted you to ask.</p>
 
 </div>
@@ -15008,8 +15011,8 @@ $</p>
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>When I read the paper <a href="https://arxiv.org/abs/1909.04852">Mixed Hamiltonian Monte Carlo for Mixed Discrete and Continuous Variables</a> by Guangyao Zhou he used an exmaple of a <a href="https://github.com/StannisZhou/mixed_hmc/blob/master/momentum/potential/simple_gmm.py">24 dimensional Gaussian Mixture Model</a> <strong>without observations</strong> to show the power of his approach. Initially I felt as if this was cheating, because in the end <a href="https://ermongroup.github.io/cs228-notes/inference/sampling">forward/ancestral</a> sampling is trival in that case. I had to remind myself that the MCMC algorithm he invented has to perform the same heavy lifting in the given example without observations as it has to perform in a situation that involves observations and the same number of free variables. The probabilistic programming languages and frameworks like <a href="https://mc-stan.org/">Stan</a> or <a href="https://docs.pymc.io/">PyMC3</a> do not employ any additional intelligence to decide which method might be most appropriate in which case.</p>
-<blockquote><p>You always take a model in the form of a scalar valued function representing the (unnormalized) total probability function and then you always apply the same hammer like an <a href="https://www.amazon.com/-/de/dp-0387951466/dp/0387951466/">SMC</a> or <a href="https://www.amazon.com/-/de/dp-B008GXJVF8/dp/B008GXJVF8/">MCMC</a> algorithm.</p>
+<p>When I read the paper <a href="https://arxiv.org/abs/1909.04852">Mixed Hamiltonian Monte Carlo for Mixed Discrete and Continuous Variables</a> by Guangyao Zhou he used an exmaple of a <a href="https://github.com/StannisZhou/mixed_hmc/blob/master/momentum/potential/simple_gmm.py">24 dimensional Gaussian Mixture Model</a> <strong>without observations</strong> to show the power of his approach. Initially, I felt as if this was cheating, because in the end <a href="https://ermongroup.github.io/cs228-notes/inference/sampling">forward/ancestral</a> sampling is trival in that case. I had to remind myself that the MCMC algorithm he invented has to perform the same heavy lifting in the given example without observations as it has to perform in a situation that involves observations and the same number of free variables. The probabilistic programming languages and frameworks like <a href="https://mc-stan.org/">Stan</a> or <a href="https://docs.pymc.io/">PyMC3</a> do not employ any additional intelligence to decide which method might be most appropriate in which case.</p>
+<blockquote><p>You always take a model in the form of a scalar valued function representing the (unnormalized) total joint probability function and then you always apply the same hammer like an <a href="https://www.amazon.com/-/de/dp-0387951466/dp/0387951466/">SMC</a> or <a href="https://www.amazon.com/-/de/dp-B008GXJVF8/dp/B008GXJVF8/">MCMC</a> algorithm.</p>
 </blockquote>
 <p>If you want to be smart on that level you have to do it yourself as a human with your own brain.</p>
 
@@ -15027,7 +15030,7 @@ $</p>
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>Below I am exaggerating the level of being explicite about each step and the level at which I use <a href="https://www.sympy.org/en/index.html">sympy</a> to achieve this explicitness. I hope that this will help you from suffering a similar level of confusion that I found myself in. In addition you might learn to appreciate to use <em>sympy</em>, which is really great for symbolic algebra.</p>
+<p>Below I am exaggerating the level of explicitness at each step of the calculation and the level to which I use <a href="https://www.sympy.org/en/index.html">SymPy</a> to achieve maximum clarity. I hope that this will help you to avoid a similar level of confusion that I found myself in. In addition you might learn to appreciate to use <a href="https://www.sympy.org/en/index.html">SymPy</a>, which is really great for symbolic algebra.</p>
 
 </div>
 </div>
@@ -15038,13 +15041,13 @@ $</p>
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>The first one is what we currently look at: independent dice throws. Let's look at two independent dice throws where we don't know $\theta\in[0,1]$: $p(d_1,d_2,\theta)=p(X_0=d_0\,|\,\theta)\cdot p(X_1=d_1\,|\,\theta)\cdot p(\theta)$. If we take $p(\theta)=\mathrm{Beta}(1,1)=1$ for $\theta\in[0,1]$ we get for each dice a one dimensional matrix with two entries:</p>
+<p>The first example is about two independent dice rolls where we don't know $\theta\in[0,1]$. The total joint probability function (I only say "probability function" and avoid the terms <em>densite</em> or <em>mass</em>, because in the mixed case it is not clear in which situation we are) is then given by: $p(d_1,d_2,\theta)=p(X_0=d_0\,|\,\theta)\cdot p(X_1=d_1\,|\,\theta)\cdot p(\theta)$. If we take $p(\theta)=\mathrm{Beta}(1,1)=1$ for $\theta\in[0,1]$ then we get for each dice a one dimensional matrix with two entries:</p>
 
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[15]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[17]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">stheta</span> <span class="o">=</span> <span class="n">sympy</span><span class="o">.</span><span class="n">var</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;\theta&#39;</span><span class="p">)</span>
@@ -15065,7 +15068,7 @@ $</p>
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[15]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[17]:</div>
 
 
 
@@ -15083,13 +15086,13 @@ $\displaystyle \left[\begin{matrix}1 - \theta\\\theta\end{matrix}\right]$
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>Where the entry with index 0 is the case where we receive "tail" and where the entry with index 1 is the case where we receive "head". We can index into that vector:</p>
+<p>The entry with index 0 belongs to the case where we observe "tail" and the entry with index 1 belongs to the case where we observe "head". We can index into that vector like so:</p>
 
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[16]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[18]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">display</span><span class="p">(</span><span class="n">D1</span><span class="p">[</span><span class="mi">0</span><span class="p">]),</span><span class="n">display</span><span class="p">(</span><span class="n">D1</span><span class="p">[</span><span class="mi">1</span><span class="p">]);</span>
@@ -15140,17 +15143,60 @@ $\displaystyle \theta$
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>For the second dice we take a 2x1 matrix, so that when we multiply the two we will get a 2x2 matrix for the 2x2 combinations of tail and head for each coin:</p>
+<p>And the indexing operation can be seen as a function that takes an integer and returns a scalar value. Exactly what we need for a probability function.</p>
+
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>For the second dice we take a 2x1 matrix (a horizontal lying vector), so that when we multiply the two we will get a 2x2 matrix for the 2x2 combinations of tail and head for each coin:</p>
 
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[17]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[19]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">D2</span> <span class="o">=</span> <span class="n">sympy</span><span class="o">.</span><span class="n">Matrix</span><span class="p">([[(</span><span class="mi">1</span><span class="o">-</span><span class="n">stheta</span><span class="p">),</span> <span class="n">stheta</span><span class="p">]])</span>
-<span class="n">D</span> <span class="o">=</span> <span class="n">D1</span><span class="o">*</span><span class="n">D2</span>
+<span class="n">D2</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[19]:</div>
+
+
+
+
+<div class="jp-RenderedLatex jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/latex">
+$\displaystyle \left[\begin{matrix}1 - \theta &amp; \theta\end{matrix}\right]$
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[20]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">D</span> <span class="o">=</span> <span class="n">D1</span><span class="o">*</span><span class="n">D2</span>
 <span class="n">D</span>
 </pre></div>
 
@@ -15167,7 +15213,7 @@ $\displaystyle \theta$
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[17]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[20]:</div>
 
 
 
@@ -15191,7 +15237,7 @@ $\displaystyle \left[\begin{matrix}\left(1 - \theta\right)^{2} &amp; \theta \lef
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[18]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[21]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">two_dice_roll_probability_function</span><span class="p">(</span><span class="n">theta</span><span class="p">,</span> <span class="n">d1</span><span class="p">,</span> <span class="n">d2</span><span class="p">):</span>
@@ -15214,7 +15260,7 @@ $\displaystyle \left[\begin{matrix}\left(1 - \theta\right)^{2} &amp; \theta \lef
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[19]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[22]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">theta</span> <span class="o">=</span> <span class="n">sympy</span><span class="o">.</span><span class="n">Integer</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span>
@@ -15249,7 +15295,7 @@ $\displaystyle \frac{1}{2}$
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[19]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[22]:</div>
 
 
 
@@ -15267,13 +15313,13 @@ $\displaystyle \frac{1}{4}$
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>The other way we could have done it would be by the use of the <a href="https://en.wikipedia.org/wiki/Kronecker_delta">Kronecker_delta</a> and using the fact that any number to the power of $0$ is $1$: $x^0=1$, e.g. the neutral element of our product of probability functions.</p>
+<p>The other way we could have done this would be to use the <a href="https://en.wikipedia.org/wiki/Kronecker_delta">Kronecker delta</a> instead of vector/matrix indexing and using the fact that any number to the power of $0$ is $1$: $x^0=1 \quad\forall x\in \mathbb{R}\setminus 0$, e.g. we receive the neutral element for our product of probability functions.</p>
 
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[20]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[23]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">sd1</span><span class="p">,</span> <span class="n">sd2</span> <span class="o">=</span> <span class="n">sympy</span><span class="o">.</span><span class="n">symbols</span><span class="p">(</span><span class="s1">&#39;d1:3&#39;</span><span class="p">)</span> <span class="c1"># we define two new sympy symbols for d1 and d2</span>
@@ -15293,7 +15339,7 @@ $\displaystyle \frac{1}{4}$
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[20]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[23]:</div>
 
 
 
@@ -15311,13 +15357,13 @@ $\displaystyle \frac{1}{4}$
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>Below the first $1$ is to remind us of the $p(\theta)=\mathrm{Beta}(1,1)=1$. In case that we used another prior this would be a different factor.</p>
+<p>Below, the first $1$ is to remind us of the $p(\theta)=\mathrm{Beta}(1,1)=1$. In case that we used another prior this would be a different factor.</p>
 
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[21]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[24]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">D_</span> <span class="o">=</span> <span class="mi">1</span><span class="o">*</span><span class="p">(</span><span class="mi">1</span><span class="o">-</span><span class="n">stheta</span><span class="p">)</span><span class="o">**</span><span class="n">sympy</span><span class="o">.</span><span class="n">KroneckerDelta</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="n">sd1</span><span class="p">)</span><span class="o">*</span><span class="n">stheta</span><span class="o">**</span><span class="n">sympy</span><span class="o">.</span><span class="n">KroneckerDelta</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="n">sd1</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="mi">1</span><span class="o">-</span><span class="n">stheta</span><span class="p">)</span><span class="o">**</span><span class="n">sympy</span><span class="o">.</span><span class="n">KroneckerDelta</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="n">sd2</span><span class="p">)</span><span class="o">*</span><span class="n">stheta</span><span class="o">**</span><span class="n">sympy</span><span class="o">.</span><span class="n">KroneckerDelta</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="n">sd2</span><span class="p">)</span>
@@ -15337,7 +15383,7 @@ $\displaystyle \frac{1}{4}$
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[21]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[24]:</div>
 
 
 
@@ -15355,7 +15401,7 @@ $\displaystyle \theta^{\delta_{1 d_{1}}} \theta^{\delta_{1 d_{2}}} \left(1 - \th
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[22]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[25]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">two_dice_roll_probability_function_</span><span class="p">(</span><span class="n">theta</span><span class="p">,</span> <span class="n">d1</span><span class="p">,</span> <span class="n">d2</span><span class="p">):</span>
@@ -15379,7 +15425,7 @@ $\displaystyle \theta^{\delta_{1 d_{1}}} \theta^{\delta_{1 d_{2}}} \left(1 - \th
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[23]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[26]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">two_dice_roll_probability_function</span><span class="p">(</span><span class="n">theta</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
@@ -15398,7 +15444,7 @@ $\displaystyle \theta^{\delta_{1 d_{1}}} \theta^{\delta_{1 d_{2}}} \left(1 - \th
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[23]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[26]:</div>
 
 
 
@@ -15433,7 +15479,7 @@ $\displaystyle \frac{1}{4}$
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[24]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[27]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">smu</span><span class="p">,</span> <span class="n">sx</span> <span class="o">=</span> <span class="n">sympy</span><span class="o">.</span><span class="n">symbols</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;\mu x&#39;</span><span class="p">)</span>
@@ -15458,7 +15504,7 @@ $\displaystyle \frac{1}{4}$
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[24]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[27]:</div>
 
 
 
@@ -15476,7 +15522,7 @@ $\displaystyle \left[\begin{matrix}\mu &amp; \sigma &amp; \lambda &amp; x &amp; 
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[25]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[28]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">sympy</span><span class="o">.</span><span class="n">stats</span><span class="o">.</span><span class="n">crv_types</span><span class="o">.</span><span class="n">NormalDistribution</span><span class="p">(</span><span class="n">smu</span><span class="p">,</span> <span class="n">ssigma</span><span class="p">)</span><span class="o">.</span><span class="n">pdf</span><span class="p">(</span><span class="n">sx</span><span class="p">)</span>
@@ -15495,7 +15541,7 @@ $\displaystyle \left[\begin{matrix}\mu &amp; \sigma &amp; \lambda &amp; x &amp; 
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[25]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[28]:</div>
 
 
 
@@ -15513,7 +15559,7 @@ $\displaystyle \frac{\sqrt{2} e^{- \frac{\left(- \mu + x\right)^{2}}{2 \sigma^{2
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[26]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[29]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">sympy</span><span class="o">.</span><span class="n">stats</span><span class="o">.</span><span class="n">crv_types</span><span class="o">.</span><span class="n">ExponentialDistribution</span><span class="p">(</span><span class="n">slambda</span><span class="p">)</span><span class="o">.</span><span class="n">pdf</span><span class="p">(</span><span class="n">sx</span><span class="p">)</span>
@@ -15532,7 +15578,7 @@ $\displaystyle \frac{\sqrt{2} e^{- \frac{\left(- \mu + x\right)^{2}}{2 \sigma^{2
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[26]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[29]:</div>
 
 
 
@@ -15556,119 +15602,10 @@ $\displaystyle \lambda e^{- \lambda x}$
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[27]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">sympy</span><span class="o">.</span><span class="n">stats</span><span class="o">.</span><span class="n">frv_types</span><span class="o">.</span><span class="n">BernoulliDistribution</span><span class="p">(</span><span class="n">sp1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">pmf</span><span class="p">(</span><span class="n">sx</span><span class="p">)</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[27]:</div>
-
-
-
-
-<div class="jp-RenderedLatex jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/latex">
-$\displaystyle \begin{cases} p_{1} &amp; \text{for}\: x = 1 \\1 - p_{1} &amp; \text{for}\: x = 0 \\0 &amp; \text{otherwise} \end{cases}$
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[28]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">sympy</span><span class="o">.</span><span class="n">latex</span><span class="p">(</span><span class="n">sympy</span><span class="o">.</span><span class="n">stats</span><span class="o">.</span><span class="n">frv_types</span><span class="o">.</span><span class="n">BernoulliDistribution</span><span class="p">(</span><span class="n">sp1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">pmf</span><span class="p">(</span><span class="n">sx</span><span class="p">)))</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>\begin{cases} p_{1} &amp; \text{for}\: x = 1 \\1 - p_{1} &amp; \text{for}\: x = 0 \\0 &amp; \text{otherwise} \end{cases}
-</pre>
-</div>
-</div>
-
-</div>
-
-</div>
-
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[29]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">sympy</span><span class="o">.</span><span class="n">stats</span><span class="o">.</span><span class="n">frv_types</span><span class="o">.</span><span class="n">BernoulliDistribution</span><span class="p">(</span><span class="n">sp1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">pmf</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[29]:</div>
-
-
-
-
-<div class="jp-RenderedLatex jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/latex">
-$\displaystyle p_{1}$
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[30]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">sympy</span><span class="o">.</span><span class="n">stats</span><span class="o">.</span><span class="n">frv_types</span><span class="o">.</span><span class="n">BernoulliDistribution</span><span class="p">(</span><span class="n">sp1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">pmf</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">sympy</span><span class="o">.</span><span class="n">stats</span><span class="o">.</span><span class="n">frv_types</span><span class="o">.</span><span class="n">BernoulliDistribution</span><span class="p">(</span><span class="n">sp1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">pmf</span><span class="p">(</span><span class="n">si</span><span class="p">)</span>
 </pre></div>
 
      </div>
@@ -15690,6 +15627,82 @@ $\displaystyle p_{1}$
 
 
 <div class="jp-RenderedLatex jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/latex">
+$\displaystyle \begin{cases} p_{1} &amp; \text{for}\: i = 1 \\1 - p_{1} &amp; \text{for}\: i = 0 \\0 &amp; \text{otherwise} \end{cases}$
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs   celltag_hide_input">
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[32]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">sympy</span><span class="o">.</span><span class="n">stats</span><span class="o">.</span><span class="n">frv_types</span><span class="o">.</span><span class="n">BernoulliDistribution</span><span class="p">(</span><span class="n">sp1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">pmf</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[32]:</div>
+
+
+
+
+<div class="jp-RenderedLatex jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/latex">
+$\displaystyle p_{1}$
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[33]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">sympy</span><span class="o">.</span><span class="n">stats</span><span class="o">.</span><span class="n">frv_types</span><span class="o">.</span><span class="n">BernoulliDistribution</span><span class="p">(</span><span class="n">sp1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">pmf</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[33]:</div>
+
+
+
+
+<div class="jp-RenderedLatex jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/latex">
 $\displaystyle 1 - p_{1}$
 </div>
 
@@ -15702,16 +15715,18 @@ $\displaystyle 1 - p_{1}$
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>For a single observation the total joint probability function would look as follows:</p>
 <p>$
 \displaystyle
 p(p_1,i,\lambda,\mu,\sigma,x)=p(p_1)p(i\,|\,p_1)\begin{cases}p(\lambda)p(x\,|\,\lambda) &amp; \text{for}\: i = 0\\ p(\mu)p(\sigma)p(x\,|\,\mu,\sigma) &amp; \text{for}\: i = 1 \\0 &amp; \text{otherwise} \end{cases}
 $</p>
+<p>Below we're using SymPy to construct the total joint probability function for two observations:</p>
 
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[31]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[34]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">sprior_exponential</span> <span class="o">=</span> <span class="n">sympy</span><span class="o">.</span><span class="n">stats</span><span class="o">.</span><span class="n">crv_types</span><span class="o">.</span><span class="n">ExponentialDistribution</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">pdf</span><span class="p">(</span><span class="n">slambda</span><span class="p">)</span>
@@ -15740,7 +15755,7 @@ $</p>
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[31]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[34]:</div>
 
 
 
@@ -15755,14 +15770,21 @@ $\displaystyle \frac{\left(\lambda \left(1 - p_{1}\right) e^{- \lambda x_{1}}\ri
 
 </div>
 
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>Often, when you ask how to model a mixture model in a probabilistic programming system like Stan or PyMC3, people will recommend that you marginalize out the discrete variables like $i$ and $j$ above. Systems like Stan cannot deal with discrete free random variables at all. PyMC3 can deal with them, but sampling will be slow and hard, so that this recommendation actually makes sense.</p>
+<p>Let's use SymPy to marginalize out the discrete variables $i$ and $j$. Marginalizing out discrete variables means summing over them:</p>
+
+</div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[32]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[35]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">marginal_likelihood1</span> <span class="o">=</span> <span class="n">sympy</span><span class="o">.</span><span class="n">summation</span><span class="p">(</span><span class="n">smixture</span><span class="p">,</span> <span class="p">(</span><span class="n">si</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="p">(</span><span class="n">sj</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span>
-<span class="n">marginal_likelihood1</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">smixture_marginal_1</span> <span class="o">=</span> <span class="n">sympy</span><span class="o">.</span><span class="n">summation</span><span class="p">(</span><span class="n">smixture</span><span class="p">,</span> <span class="p">(</span><span class="n">si</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="p">(</span><span class="n">sj</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span>
+<span class="n">smixture_marginal_1</span>
 </pre></div>
 
      </div>
@@ -15778,7 +15800,7 @@ $\displaystyle \frac{\left(\lambda \left(1 - p_{1}\right) e^{- \lambda x_{1}}\ri
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[32]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[35]:</div>
 
 
 
@@ -15793,10 +15815,16 @@ $\displaystyle \frac{\left(\lambda \left(1 - p_{1}\right) e^{- \lambda x_{1}} + 
 
 </div>
 
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>For clarity we may only look at the likelihood part without the prior components:</p>
+
+</div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[33]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[36]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">sympy</span><span class="o">.</span><span class="n">summation</span><span class="p">(</span><span class="n">smixture_likelihood</span><span class="p">,</span> <span class="p">(</span><span class="n">si</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="p">(</span><span class="n">sj</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span>
@@ -15815,7 +15843,7 @@ $\displaystyle \frac{\left(\lambda \left(1 - p_{1}\right) e^{- \lambda x_{1}} + 
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[33]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[36]:</div>
 
 
 
@@ -15830,10 +15858,16 @@ $\displaystyle \left(\lambda \left(1 - p_{1}\right) e^{- \lambda x_{1}} + \frac{
 
 </div>
 
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>Obviously, we can do the same in the matrix picture rather than using Kronecker deltas:</p>
+
+</div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[34]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[37]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">M1</span> <span class="o">=</span> <span class="n">sympy</span><span class="o">.</span><span class="n">Matrix</span><span class="p">([</span>
@@ -15860,7 +15894,7 @@ $\displaystyle \left(\lambda \left(1 - p_{1}\right) e^{- \lambda x_{1}} + \frac{
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[34]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[37]:</div>
 
 
 
@@ -15878,7 +15912,7 @@ $\displaystyle \frac{e^{- \lambda} e^{- \frac{\mu^{2}}{10000}} e^{- 2 \sigma} \l
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[35]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[38]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">E_</span> <span class="o">=</span> <span class="n">E</span><span class="o">.</span><span class="n">doit</span><span class="p">()</span>
@@ -15889,10 +15923,16 @@ $\displaystyle \frac{e^{- \lambda} e^{- \frac{\mu^{2}}{10000}} e^{- 2 \sigma} \l
 </div>
 </div>
 
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>We can receive concrete values for a situation like if we assume that both data-points are from the exponential distribution:</p>
+
+</div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[36]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[39]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">E_</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">]</span>
@@ -15911,7 +15951,7 @@ $\displaystyle \frac{e^{- \lambda} e^{- \frac{\mu^{2}}{10000}} e^{- 2 \sigma} \l
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[36]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[39]:</div>
 
 
 
@@ -15926,14 +15966,20 @@ $\displaystyle \frac{\lambda^{2} \left(1 - p_{1}\right)^{2} e^{- \lambda} e^{- \
 
 </div>
 
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>The marginalization works again by summing over the discrete variables. This time we have to use <code>sympy.Add</code> rather than <code>sympy.summation</code>, because we don't perform a symbolic summation:</p>
+
+</div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[37]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[40]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">marginal_likelihood2</span> <span class="o">=</span> <span class="n">sympy</span><span class="o">.</span><span class="n">Add</span><span class="p">(</span><span class="o">*</span><span class="p">[</span><span class="n">E_</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">]</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span> <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">)])</span>
-<span class="n">marginal_likelihood2</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">smixture_marginal_2</span> <span class="o">=</span> <span class="n">sympy</span><span class="o">.</span><span class="n">Add</span><span class="p">(</span><span class="o">*</span><span class="p">[</span><span class="n">E_</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">]</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span> <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">)])</span>
+<span class="n">smixture_marginal_2</span>
 </pre></div>
 
      </div>
@@ -15949,7 +15995,7 @@ $\displaystyle \frac{\lambda^{2} \left(1 - p_{1}\right)^{2} e^{- \lambda} e^{- \
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[37]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[40]:</div>
 
 
 
@@ -15964,13 +16010,19 @@ $\displaystyle \frac{\lambda^{2} \left(1 - p_{1}\right)^{2} e^{- \lambda} e^{- \
 
 </div>
 
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>In this form it is not immediately obvious that the two expressions are actually the same, but we can let SymPy answer that by subtracting the two terms and showing that the result is 0:</p>
+
+</div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[38]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[42]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">sympy</span><span class="o">.</span><span class="n">simplify</span><span class="p">(</span><span class="n">marginal_likelihood1</span> <span class="o">-</span> <span class="n">marginal_likelihood2</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">sympy</span><span class="o">.</span><span class="n">simplify</span><span class="p">(</span><span class="n">smixture_marginal_1</span> <span class="o">-</span> <span class="n">smixture_marginal_2</span><span class="p">)</span>
 </pre></div>
 
      </div>
@@ -15986,7 +16038,7 @@ $\displaystyle \frac{\lambda^{2} \left(1 - p_{1}\right)^{2} e^{- \lambda} e^{- \
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[38]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[42]:</div>
 
 
 
